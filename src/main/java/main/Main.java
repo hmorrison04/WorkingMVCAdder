@@ -1,3 +1,4 @@
+package main;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,7 +17,7 @@ public class Main extends Application
     storeModel model = new storeModel();
     
     FXMLLoader loader = new FXMLLoader();
-    loader.setLocation(Main.class.getResource("views/MainView.fxml"));
+    loader.setLocation(Main.class.getResource("../views/MainView.fxml"));
     BorderPane view = loader.load();
     MainController cont = loader.getController();
     ViewTransitionalModel vm =new ViewTransitionalModel(view,model); 

@@ -9,12 +9,12 @@
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#onClickGrocery" text="Grocery List">
+            <Button id="glButton" mnemonicParsing="false" onAction="#onClickGrocery" text="Grocery List">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onClickCash" text="Cash">
+            <Button id="cashButton" mnemonicParsing="false" onAction="#onClickCash" text="Cash">
                <font>
                   <Font size="24.0" />
                </font>
