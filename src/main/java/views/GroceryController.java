@@ -39,8 +39,8 @@ public class GroceryController
     }
     catch(NumberFormatException e)
     {
-      itemCostLabel.accessibleTextProperty().set("");
     }
+    itemCostLabel.textProperty().set("");
     
     return amt;
   }
@@ -51,6 +51,7 @@ public class GroceryController
   {
     GroceryItem gi = new GroceryItem(itemNameLabel.textProperty().get(),
           getAmt());
+    itemNameLabel.textProperty().set("");
     
     model.getGroceries().add(gi);
     

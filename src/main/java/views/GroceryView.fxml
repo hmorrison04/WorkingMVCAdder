@@ -21,7 +21,7 @@
             </Label>
          </top>
          <center>
-            <ListView fx:id="grocView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <ListView id="listView" fx:id="grocView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
@@ -42,7 +42,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="itemNameLabel" />
+                        <TextField id="itemTextField" fx:id="itemNameLabel" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -52,10 +52,10 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="itemCostLabel" />
+                        <TextField id="costTextField" fx:id="itemCostLabel" />
                      </children>
                   </HBox>
-                  <Button mnemonicParsing="false" onAction="#onAddItem" text="Add Item" />
+                  <Button id="addItemButton" mnemonicParsing="false" onAction="#onAddItem" text="Add Item" />
                </children>
             </VBox>
          </center>

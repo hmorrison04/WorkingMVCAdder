@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.util.StringConverter;
-import javafx.util.converter.NumberStringConverter;
+import javafx.util.converter.CurrencyStringConverter;
 import models.storeModel;
 
 public class CashController
@@ -27,7 +27,8 @@ public class CashController
     model = newModel;
     
     //bind label
-    StringConverter<Number> fmt = new NumberStringConverter();
+    StringConverter<Number> fmt = new CurrencyStringConverter();
+    
     
     Bindings.bindBidirectional(cashBalanceLabel.textProperty(),
         model.getMoney(),fmt);
@@ -45,9 +46,9 @@ public class CashController
     }
     catch(NumberFormatException e)
     {
-      deltaCashTextField.accessibleTextProperty().set("");
+      deltaCashTextField.textProperty().set("");
     }
-    
+    deltaCashTextField.textProperty().set("");
     return amt;
   }
   

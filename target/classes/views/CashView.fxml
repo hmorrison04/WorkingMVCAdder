@@ -11,12 +11,12 @@
    <center>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Present Balance $">
+            <Label text="Present Balance ">
                <font>
                   <Font size="48.0" />
                </font>
             </Label>
-            <Label fx:id="cashBalanceLabel" text="50.34">
+            <Label id="displayAmtLabel" fx:id="cashBalanceLabel" text="\$50.34">
                <font>
                   <Font size="48.0" />
                </font>
@@ -31,9 +31,9 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <TextField fx:id="deltaCashTextField" />
-            <Button mnemonicParsing="false" onAction="#onAddCash" text="Add" />
-            <Button mnemonicParsing="false" onAction="#onRemoveCash" text="Remove" />
+            <TextField id="enterAmountText" fx:id="deltaCashTextField" />
+            <Button id="addMoneyButton" mnemonicParsing="false" onAction="#onAddCash" text="Add" />
+            <Button id="removeMoneyButton" mnemonicParsing="false" onAction="#onRemoveCash" text="Remove" />
          </children>
       </HBox>
    </bottom>
