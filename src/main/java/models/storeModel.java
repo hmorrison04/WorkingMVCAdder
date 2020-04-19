@@ -8,7 +8,7 @@ import javafx.collections.ObservableList;
 public class storeModel
 {
   DoubleProperty money = new SimpleDoubleProperty();
-  ObservableList<GroceryItems> groceries = 
+  ObservableList<GroceryItem> groceries = 
       FXCollections.observableArrayList();
   
   public storeModel()
@@ -28,7 +28,7 @@ public class storeModel
   /**
    * @return the groceries
    */
-  public ObservableList<GroceryItems> getGroceries()
+  public ObservableList<GroceryItem> getGroceries()
   {
     return groceries;
   }
@@ -36,7 +36,7 @@ public class storeModel
   
   public void deltaMoney(double amt)
   {
-    money.add(amt);
+    money.set(money.get()+amt);
   }
   
 }

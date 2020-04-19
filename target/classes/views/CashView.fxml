@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<BorderPane prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.CashController">
    <center>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -17,7 +16,7 @@
                   <Font size="48.0" />
                </font>
             </Label>
-            <Label text="50.34">
+            <Label fx:id="cashBalanceLabel" text="50.34">
                <font>
                   <Font size="48.0" />
                </font>
@@ -28,10 +27,13 @@
    <bottom>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Amount" />
-            <TextField />
-            <Button mnemonicParsing="false" text="Add" />
-            <Button mnemonicParsing="false" text="Remove" />
+            <Label text="Amount">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TextField fx:id="deltaCashTextField" />
+            <Button mnemonicParsing="false" onAction="#onAddCash" text="Add" />
+            <Button mnemonicParsing="false" onAction="#onRemoveCash" text="Remove" />
          </children>
       </HBox>
    </bottom>

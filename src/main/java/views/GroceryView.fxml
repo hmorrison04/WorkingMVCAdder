@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.GroceryController">
    <items>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
          <top>
@@ -21,7 +21,7 @@
             </Label>
          </top>
          <center>
-            <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <ListView fx:id="grocView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
@@ -42,7 +42,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TextField />
+                        <TextField fx:id="itemNameLabel" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -52,10 +52,10 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TextField />
+                        <TextField fx:id="itemCostLabel" />
                      </children>
                   </HBox>
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" onAction="#onAddItem" text="Add Item" />
                </children>
             </VBox>
          </center>

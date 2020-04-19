@@ -6,15 +6,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import views.CashController;
+import views.GroceryController;
 
 public class ViewTransitionalModel implements ViewTransitionModelInterface
 {
 
   BorderPane mainview;
+  storeModel model;
   
-  public ViewTransitionalModel(BorderPane view)
+  public ViewTransitionalModel(BorderPane view,storeModel newModel)
   {
     mainview = view;
+    model = newModel;
   }
   
   
@@ -28,6 +32,10 @@ public class ViewTransitionalModel implements ViewTransitionModelInterface
     try {
       Pane view = loader.load();
       mainview.setCenter(view);
+      CashController cont = loader.getController();
+      cont.setModel(model);
+      
+      
     } catch (IOException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
@@ -44,6 +52,8 @@ public class ViewTransitionalModel implements ViewTransitionModelInterface
     try {
       Node view = loader.load();
       mainview.setCenter(view);
+      GroceryController cont = loader.getController();
+      cont.setModel(model);
     } catch (IOException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();

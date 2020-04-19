@@ -1,6 +1,6 @@
 package models;
 
-public class GroceryItems
+public class GroceryItem
 {
   String name;
   Double cost;
@@ -8,7 +8,7 @@ public class GroceryItems
    * @param name
    * @param cost
    */
-  public GroceryItems(String name, Double cost)
+  public GroceryItem(String name, Double cost)
   {
     super();
     this.name = name;
@@ -60,7 +60,7 @@ public class GroceryItems
       return false;
     if (getClass() != obj.getClass())
       return false;
-    GroceryItems other = (GroceryItems) obj;
+    GroceryItem other = (GroceryItem) obj;
     if (cost == null) {
       if (other.cost != null)
         return false;
