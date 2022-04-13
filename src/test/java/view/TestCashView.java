@@ -89,17 +89,17 @@ public class TestCashView
   @Test
   public void testRemoves(FxRobot robot)
   {
-    checkRemoveCash(robot,"$0.00",".15","($0.15)");
-    checkRemoveCash(robot,"($0.15)","1.15","($1.30)");
-    checkRemoveCash(robot,"($1.30)","101","($102.30)");
+    checkRemoveCash(robot,"$0.00",".15","-$0.15");
+    checkRemoveCash(robot,"-$0.15","1.15","-$1.30");
+    checkRemoveCash(robot,"-$1.30","101","-$102.30");
   }
   
   @Test
   public void testInterleave(FxRobot robot)
   {
     checkAddCash(robot,"$0.00","100","$100.00");
-    checkRemoveCash(robot,"$100.00","200","($100.00)");
-    checkAddCash(robot,"($100.00)","150","$50.00");
+    checkRemoveCash(robot,"$100.00","200","-$100.00");
+    checkAddCash(robot,"-$100.00","150","$50.00");
     
     
   }

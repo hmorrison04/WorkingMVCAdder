@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import models.GroceryItem;
 import models.ViewTransitionalModel;
 import models.storeModel;
 import views.MainController;
@@ -15,6 +16,8 @@ public class Main extends Application
   public void start(Stage stage) throws Exception
   {
     storeModel model = new storeModel();
+    
+    model.getGroceries().add(new GroceryItem("cat",34d));
     
     FXMLLoader loader = new FXMLLoader();
     loader.setLocation(Main.class.getResource("../views/MainView.fxml"));
