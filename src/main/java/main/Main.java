@@ -17,7 +17,9 @@ public class Main extends Application
   {
     storeModel model = new storeModel();
     
+
     model.getGroceries().add(new GroceryItem("cat",34d));
+    //model.getGroceries().add(new GroceryItem("dog",18d));
     
     FXMLLoader loader = new FXMLLoader();
     loader.setLocation(Main.class.getResource("../views/MainView.fxml"));

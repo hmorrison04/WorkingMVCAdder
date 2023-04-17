@@ -60,6 +60,8 @@ public class GroceryItemCell extends ListCell<GroceryItem>
 	@Override
 	protected void updateItem(GroceryItem item, boolean empty)
 	{
+		super.updateItem(item, empty);//really important! always keep!
+		
 		if(empty || item == null)
 		{
 			setGraphic(null);
@@ -70,7 +72,7 @@ public class GroceryItemCell extends ListCell<GroceryItem>
 			cont.setModel(this);
 			setText(item.toString());
 		}
-		super.updateItem(item, empty);//really important! always keep!
+		
 	}
 
 
@@ -93,6 +95,7 @@ public class GroceryItemCell extends ListCell<GroceryItem>
 	public void commitEdit(GroceryItem newValue)
 	{
 		//newValue.setName(tf.getText());
+		
 		showUneditable();
 		
 		super.commitEdit(newValue);//really important! always keep!

@@ -1,14 +1,9 @@
 package models;
 
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-
 public class GroceryItem
 {
- public  StringProperty name = new SimpleStringProperty();
-  public DoubleProperty cost = new SimpleDoubleProperty();
+  String name;
+  Double cost;
   /**
    * @param name
    * @param cost
@@ -16,43 +11,36 @@ public class GroceryItem
   public GroceryItem(String name, Double cost)
   {
     super();
-    this.name.set(name);
-    this.cost.set(cost);
+    this.name = name;
+    this.cost = cost;
   }
-  
-  
-  
- 
-
-
-
-/**
+  /**
    * @return the name
    */
   public String getName()
   {
-    return name.get();
+    return name;
   }
   /**
    * @param name the name to set
    */
   public void setName(String name)
   {
-    this.name.set(name);
+    this.name = name;
   }
   /**
    * @return the cost
    */
   public Double getCost()
   {
-    return cost.get();
+    return cost;
   }
   /**
    * @param cost the cost to set
    */
   public void setCost(Double cost)
   {
-    this.cost.set(cost);
+    this.cost = cost;
   }
   @Override
   public int hashCode()
@@ -88,7 +76,7 @@ public class GroceryItem
   @Override
   public String toString()
   {
-    return name.get() + " : " + cost.get() ;
+    return name + " : " + cost ;
   }
   
   

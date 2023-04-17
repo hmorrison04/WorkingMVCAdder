@@ -35,6 +35,10 @@ public class GroceryController
       grocView.setEditable(true);
       
       
+      grocView.getSelectionModel()
+      .selectedItemProperty()
+      .addListener((e)->{onSelectedItem();});
+      
       
       
       grocView.setOnEditStart(new EventHandler<EditEvent<GroceryItem>>() {
@@ -62,6 +66,14 @@ public class GroceryController
       
     }
 
+    
+    private void onSelectedItem()
+    {
+    	GroceryItem item = grocView.getSelectionModel().getSelectedItem();
+    	System.out.println("Item clicked"+item);
+    	
+    }
+    
   
   
   @FXML
@@ -103,21 +115,6 @@ public class GroceryController
     
   }
 
-  /*
-  @FXML
-  void onLVEditCandle(ActionEvent event) {
-	  System.out.println("Edit Cancel: ");
-  }
-
-  @FXML
-  void onLVEditCommit(ActionEvent event) {
-	  System.out.println("Edit Commit: ");
-  }
-
-  @FXML
-  void onLVEditStart(ActionEvent event) {
-	  System.out.println("Edit Start: ");
-  }
-  */
+  
   
 }

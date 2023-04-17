@@ -19,10 +19,10 @@ public class GroceryItemController
 		GroceryItem item = model.getItem();
 		if(item!=null)
 		{
-			NameTF.textProperty().bindBidirectional(model.getItem().name);
+			NameTF.textProperty().set(model.getItem().getName());
 		
-			StringConverter<Number> converter = new NumberStringConverter();
-			Bindings.bindBidirectional(CostTF.textProperty(), model.getItem().cost,converter);
+			
+			CostTF.textProperty().set(""+model.getItem().getCost());
 		}
 	}
 	
@@ -32,8 +32,31 @@ public class GroceryItemController
 	    @FXML
 	    private TextField NameTF;
 
+	    
+	    private double getAmt()
+	    {
+	      String val = CostTF.textProperty().get();
+	      double amt = 0;
+	      
+	      try
+	      {
+	        amt = Double.parseDouble(val);
+	      }
+	      catch(NumberFormatException e)
+	      {
+	        CostTF.textProperty().set("");
+	      }
+	      return amt;
+	    }
+	    
+	    
 	    @FXML
 	    void OnCommitItem(ActionEvent event) {
+	    	
+	    	model.getItem().setName(NameTF.getText());
+	    	model.getItem().setCost(getAmt());
+	    	
+	    	
 	    	model.commitEdit(model.getItem());
 	    }
 
@@ -42,6 +65,11 @@ public class GroceryItemController
 	    	model.cancelEdit();
 
 	    }
+	    
+	    
+	    
+	    
+	    
 
 	
 }
