@@ -103,7 +103,7 @@ public class GroceryController
     
   }
 
-  
+  /*
   @FXML
   void onLVEditCandle(ActionEvent event) {
 	  System.out.println("Edit Cancel: ");
@@ -118,6 +118,6 @@ public class GroceryController
   void onLVEditStart(ActionEvent event) {
 	  System.out.println("Edit Start: ");
   }
-  
+  */
   
 }

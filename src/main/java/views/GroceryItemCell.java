@@ -43,7 +43,7 @@ public class GroceryItemCell extends ListCell<GroceryItem>
 	private void showEditable()
 	{
 		this.setGraphic(node);
-		this.textProperty().set("");;
+		this.setText("");
 		
 	}
 	
@@ -51,7 +51,7 @@ public class GroceryItemCell extends ListCell<GroceryItem>
 	private void showUneditable()
 	{
 		this.setGraphic(null);
-		textProperty().setValue(getItem() != null?getItem().toString():"");
+		this.setText(getItem() != null?getItem().toString():"");
 	}
 	
 	
@@ -60,13 +60,15 @@ public class GroceryItemCell extends ListCell<GroceryItem>
 	@Override
 	protected void updateItem(GroceryItem item, boolean empty)
 	{
-		if(empty)		{
-			//nothing to do here.			
+		if(empty || item == null)
+		{
+			setGraphic(null);
+			setText(null);
 		}
 		else
 		{
 			cont.setModel(this);
-			textProperty().setValue(item.toString());
+			setText(item.toString());
 		}
 		super.updateItem(item, empty);//really important! always keep!
 	}
