@@ -1,11 +1,8 @@
 package views;
 
-import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import javafx.util.StringConverter;
-import javafx.util.converter.NumberStringConverter;
 import models.GroceryItem;
 
 public class GroceryItemController
