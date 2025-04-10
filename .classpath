@@ -37,5 +37,26 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/DS_Lab11"/>
+	<classpathentry kind="lib" path="C:/Users/hanna/.m2/repository/org/openjfx/javafx-base/17.0.12/javafx-base-17.0.12-win.jar" sourcepath="C:/Users/hanna/.m2/repository/org/openjfx/javafx-base/17.0.12/javafx-base-17.0.12-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.openjfx"/>
+			<attribute name="maven.artifactId" value="javafx-base"/>
+			<attribute name="maven.version" value="17.0.12"/>
+			<attribute name="maven.classifier" value="win"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/hanna/.m2/repository/org/openjfx/javafx-base/17/javafx-base-17-win.jar" sourcepath="C:/Users/hanna/.m2/repository/org/openjfx/javafx-base/17/javafx-base-17-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.openjfx"/>
+			<attribute name="maven.artifactId" value="javafx-base"/>
+			<attribute name="maven.version" value="17"/>
+			<attribute name="maven.classifier" value="win"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

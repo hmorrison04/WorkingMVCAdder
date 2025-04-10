@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
+   <center>
+      <GridPane prefHeight="330.0" prefWidth="543.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.3333740234375" minWidth="10.0" prefWidth="28.000001907348633" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.99999809265137" minWidth="10.0" prefWidth="109.33331298828124" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.66668701171872" minWidth="10.0" prefWidth="130.66668701171872" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="17.666707356770814" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.99995930989581" minWidth="10.0" prefWidth="237.99995930989581" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="156.00001017252603" minHeight="0.0" prefHeight="90.00004069010416" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="163.33333333333334" minHeight="10.0" prefHeight="135.99995930989581" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#onClickEnter" text="Enter" GridPane.columnIndex="5" />
+            <TextField fx:id="numEntryBox1" onAction="#onNumBox1Click" prefHeight="18.0" prefWidth="61.0" GridPane.columnIndex="1" />
+            <TextField fx:id="numEntryBox2" onAction="#onNumBox2Click" GridPane.columnIndex="3" />
+            <Label prefHeight="25.0" prefWidth="109.0" text="                +" GridPane.columnIndex="2" />
+            <Label prefHeight="33.0" prefWidth="91.0" text="             =" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="finalAnswer" prefHeight="60.0" prefWidth="122.0" text="           Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <Label text="Number Adder" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
