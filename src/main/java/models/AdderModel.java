@@ -30,8 +30,8 @@ public class AdderModel
 	
 	public void addNumbers(double amt)
 	{
-		answer.set(0);
-		answer.set(answer.get() + amt);
+		answer.set(amt);
+		//answer.set(answer.get() + amt);
 	}
 	
 	
